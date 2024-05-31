@@ -1,0 +1,1 @@
+export { QRCodeModule } from './qr-code'
