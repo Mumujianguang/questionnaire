@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .qr-code-container {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-code-container"></div>
+    
+    <script src="../dist/score-app.umd.js"></script>
+
+    <script>
+        const qrCode = new window.ScoreApp.QRCodeModule(
+            document.querySelector('.qr-code-container'),
+            {
+                value: 'https://www.wenjuan.com/s/UZBZJvOIMcP/#'
+            }
+        )
+
+        qrCode.render()
+    </script>
+</body>
+</html>
