@@ -95,7 +95,7 @@ export function App() {
 
         const params = {
             form_role: values.user,
-            form_opinion: values.suggestion,
+            form_opinion: values.suggestion ?? '',
             scoreInfo: [
                 {
                     form_scene: 0, // 数据汇管
@@ -153,7 +153,7 @@ export function App() {
 
         const currentTime = await getCurrentTime();
 
-        const response = await fetch('/openapi/model/insert/dcwjpf', {
+        const response = await fetch(`${window.SF_PREFIX ?? '/sdcue'}/openapi/model/insert/dcwjpf`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -228,7 +228,7 @@ export function App() {
                         <Form.Item
                             name="suggestion"
                             label="意见建议"
-                            rules={[{ required: true, message: '请输入意见建议' }]}
+                            // rules={[{ required: true, message: '请输入意见建议' }]}
                         >
                             <Input.TextArea placeholder="请输入" rows={3}></Input.TextArea>
                         </Form.Item>
