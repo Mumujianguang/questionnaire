@@ -10,10 +10,16 @@
             width: 300px;
             height: 300px;
         }
+
+        .rate-container {
+            width: 500px;
+            height: 800px;
+        }
     </style>
 </head>
 <body>
     <div class="qr-code-container"></div>
+    <div class="rate-container"></div>
     
     <script src="../dist/score-app.umd.js"></script>
 
@@ -25,7 +31,9 @@
             }
         )
 
-        qrCode.render()
+        qrCode.render();
+
+        window.ScoreApp.renderRate(document.querySelector('.rate-container'));
     </script>
 </body>
 </html>

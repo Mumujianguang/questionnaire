@@ -9,6 +9,15 @@ export default defineConfig({
             NODE_ENV: '"production"'
         }
     },
+    server: {
+        host: '0.0.0.0',
+        port: 5773,
+        proxy: {
+            '/openapi': {
+                target: 'http://10.1.80.43:18080/'
+            }
+        }
+    },
     build: {
         lib: {
             entry: './src/module/index.ts',

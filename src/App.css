@@ -7,18 +7,20 @@
 
 .home {
     width: 100%;
-    height: max-content;
+    height: 100%;
     background-image: url('./assets/background.png');
     background-size: 100% 100%;
     padding: 64px 8px 0 8px;
+    position: relative;
+    overflow: scroll;
 }
 
 .content {
-    height: 100%;
+    height: max-content;
     background-color: #fff;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: 16px;
+    padding: 16px 16px 128px 16px;
     position: relative;
 }
 
@@ -44,7 +46,7 @@
 }
 
 .background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -74,8 +76,13 @@
 
 .ant-form-item-control-input-content .ant-btn {
      width: 100%;
+     background-color: #1890ff !important;
+     border-color: #1890ff !important;
 }
 
 .formItemRate .ant-form-item-control-input .ant-form-item-required::before {
     display: none !important;
+}
+.ant-radio-wrapper .ant-radio {
+    align-self: unset !important;
 }
